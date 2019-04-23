@@ -1,0 +1,17 @@
+.signinPage
+  .container
+    .userIcon
+      %i.fas.fa-user.fa-3x
+    %h2.title ログイン
+    = form_for(resource, as: resource_name, url: session_path(resource_name)) do |f|
+      .form-group
+        = f.label :email
+        %br/
+        = f.email_field :email, autofocus: true, class: "form-control", autocomplete: "email", placeholder: "emailを入力してください"
+      .form-group
+        = f.label :password
+        %br/
+        = f.password_field :password, class: "form-control", autocomplete: "off", placeholder: "パスワードを入力してください"
+      .form-group.text-center
+        = f.submit "ログインする", class: "loginBtn"
+    = render "devise/shared/links"
