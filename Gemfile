@@ -65,3 +65,6 @@ gem 'devise'
 gem 'bootstrap', '~> 4.1.3'
 gem 'jquery-rails'
 gem "font-awesome-sass"
+gem 'carrierwave'
+gem 'mini_magick'
+gem 'haml-rails'
