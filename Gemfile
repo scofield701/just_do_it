@@ -62,9 +62,12 @@ end
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 gem 'devise'
-gem 'bootstrap', '~> 4.1.3'
 gem 'jquery-rails'
-gem "font-awesome-sass"
 gem 'carrierwave'
 gem 'mini_magick'
 gem 'haml-rails'
+gem 'pry-rails'
+gem 'websocket-rails'
+gem 'ransack'
+gem 'kaminari'
+gem 'gretel'

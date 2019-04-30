@@ -1,59 +1,66 @@
-.login-page {
+.scroll {
   height: 100vh;
-  background: url(/images/toppage1.jpg) fixed;
-  background-size: cover;
+  overflow: scroll;
 
-  &_contents {
-    height: 100vh;
-    position: relative;
+  .users-page {
+    @include clearfix;
+    padding: 70px 0;
+    margin: 0 auto;
+    max-width: 700px;
 
-    .yellow {
-      color: $yellow;
+    .user-card:nth-child(odd) {
+      margin-right: 60px;
     }
+    .user-card {
+      display: block;
+      width: 320px;
+      background: $white;
+      position: relative;
+      float: left;
+      margin-bottom: 50px;
 
-    .black {
-      display: inline-block;
-      float: right;
-      color: $black;
-      border: solid 8px $black;
-      padding: 15px;
-      border-radius: 30px;
-      box-shadow: 4px 3px 0 $white,
-                  9px 8px 0 rgba(0,0,0,0.15);
-    }
-
-    .red {
-      @include clearfix;
-      clear: both;
-      color: $red;
-    }
-
-    &_title {
-      font-size: 5.5rem;
-      font-weight: bold;
-      text-align: right;
-      margin-bottom: 10px;
-      text-shadow: 4px 3px 0 $white,
-                   9px 8px 0 rgba(0,0,0,0.15);
-    }
-
-    &_title:first-child {
-      padding-top: 40px;
-    }
-
-    &_btn {
-      display: inline-block;
-      position: absolute;
-      left: 0;
-      right: 0;
-      margin: 0 auto;
-      max-width: 200px;
-      bottom: 40px;
-      padding: 20px;
-      border-radius: 30px;
-      background: $blue;
-      color: $white;
-      font-size: 30px;
+      &_image {
+        width: 320px;
+        height: 320px;
+        border-radius: 50%;
+        overflow: hidden;
+        img {
+          height: 100%;
+          width: 100%;
+          object-fit: cover;
+        }
+      }
+      .user-card-intro {
+        padding-top: 16px;
+        &_name {
+          display: inline-block;
+          overflow: hidden;
+          position: relative;
+          word-break: break-word;
+          white-space: normal;
+          font-size: 16px;
+          color: $gray;
+          font-weight: bold;
+        }
+        &_fav {
+          display: inline-block;
+          float: right;
+          .fav-count {
+            font-size: 16px;
+            font-weight: 400;
+            color: $water;
+            i {
+              margin: 0 4px 0 0;
+              vertical-align: middle;
+            }
+            span {
+              display: inline-block;
+              margin: 1px 0 0;
+              vertical-align: middle;
+            }
+          }
+        }
+      }
     }
   }
 }

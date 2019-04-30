@@ -1,0 +1,66 @@
+.top-page {
+  height: 100vh;
+  background: url(/images/toppage1.jpg) fixed;
+  background-size: cover;
+
+  &_contents {
+    height: 100vh;
+    position: relative;
+
+    .yellow {
+      color: $yellow;
+    }
+
+    .black {
+      display: inline-block;
+      float: right;
+      color: $blue;
+      border: solid 8px $blue;
+      padding: 0 15px;
+      border-radius: 30px;
+      box-shadow: 4px 3px 0 $white,
+                  9px 8px 0 rgba(0,0,0,0.15);
+    }
+
+    .red {
+      @include clearfix;
+      clear: both;
+      color: $red;
+    }
+
+    &_title {
+      font-size: 5.5rem;
+      font-weight: bold;
+      text-align: right;
+      margin-right: 30px;
+      margin-bottom: 10px;
+      text-shadow: 4px 3px 0 $white,
+                   9px 8px 0 rgba(0,0,0,0.15);
+    }
+
+    &_title:first-child {
+      padding-top: 40px;
+    }
+
+    &_btn {
+      display: inline-block;
+      position: absolute;
+      left: 0;
+      right: 0;
+      margin: 0 auto;
+      max-width: 200px;
+      bottom: 40px;
+      padding: 20px;
+      border-radius: 30px;
+      background: linear-gradient(90deg,$blue 0,$light-blue 100%);;
+      color: $white;
+      font-size: 30px;
+      text-align: center;
+    }
+
+    &_btn:hover {
+      opacity: 0.9;
+      transition: opacity .5s;
+    }
+  }
+}

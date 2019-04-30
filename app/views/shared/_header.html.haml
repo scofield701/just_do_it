@@ -1,0 +1,35 @@
+.default-container{id: 0}
+  %header
+    .logo
+      = link_to users_path do
+        = image_tag("/images/icon.png", class: "logo_icon")
+        %span
+          Just Do It
+
+    .menu-list
+      .chat-icon
+        = link_to(content_tag(:i, "", class: 'far fa-comment-dots'), matching_index_path)
+      %ul.menu
+        %li.menu_bar
+          %i.fas.fa-list
+          %ul
+            %li
+              = link_to "MyPage", user_path(current_user.id), class: "mypage-btn"
+            %li
+              = link_to "Matching", matching_index_path, class: "matching-btn"
+            %li
+              = link_to "Favorite", user_path(current_user.id), class: "favorite-btn"
+            %li
+              = link_to "Setting", edit_user_registration_path, class: "setting-btn"
+            %li
+              = link_to "Logout", destroy_user_session_path, method: :delete , class: "logout-btn"
+
+    .search-and-community
+      %ul
+        %li.search
+          = link_to(content_tag(:i, "", class: "fa fa-search search-btn"))
+        %li.community
+          = link_to(content_tag(:i, "", class: "fa fa-users community-btn"))
+
+  %nav.nav-var
+    = breadcrumbs separator: " #{content_tag(:i, '', :class=>'fa fa-angle-right')} "

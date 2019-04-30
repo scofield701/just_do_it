@@ -1,0 +1,63 @@
+.matching {
+  padding-top: 100px;
+
+  &_num {
+    text-align: center;
+    font-size: 13px;
+    color: $blue;
+    margin-bottom: 20px;
+  }
+
+  &_title {
+    font-size: 20px;
+    text-align: center;
+  }
+
+  &_list {
+    margin: 30px 140px 0 140px;
+
+    .matching-user {
+      display: flex;
+      align-items: center;
+      padding: 20px 0px;
+      border-bottom: 1px solid #e8e8e8;
+      position: relative;
+
+      &_img {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        overflow: hidden;
+        margin-right: 10px;
+
+        img {
+          height: 100%;
+          width: 100%;
+          object-fit: cover;
+        }
+      }
+
+      &_last-message {
+        margin-left: 40px;
+        color: $msg-text-gray;
+      }
+
+      form {
+        position: absolute;
+        right: 0;
+        .chat-form_btn {
+          border: none;
+          padding: 10px;
+          background: $water;
+          color: #fff;
+          border-radius: 6px;
+          cursor: pointer;
+          transition: opacity .3s;
+          &:hover {
+            opacity: .7;
+          }
+        }
+      }
+    }
+  }
+}

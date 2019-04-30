@@ -1,0 +1,132 @@
+.default-container {
+  position: fixed;
+  top: 0px;
+  height: 55px;
+  width: 100vw;
+  z-index: 100;
+  background-color: $light-blue;
+  opacity: 0.9;
+
+  header {
+    position: relative;
+    max-width: 1020px;
+    margin: 0 auto;
+    padding: 8px 0 0;
+
+    .logo {
+      padding-top: 10px;
+      position: absolute;
+      top: 20px;
+      left: 50%;
+      transform: translateY(-50%) translateX(-50%);
+      span {
+        color: $white;
+        font-weight: bold;
+        font-size: 25px;
+        font-family: 'Pacifico', cursive;
+      }
+
+      &_icon {
+        height: 36px;
+      }
+    }
+
+    .menu-list {
+      line-height: 50px;
+      float: right;
+
+      .chat-icon {
+        display: inline-block;
+        position: absolute;
+        right: 60px;
+
+        i {
+          color: $white;
+          font-size: 30px;
+        }
+      }
+
+      .menu {
+        display: inline-block;
+        overflow: hidden;
+
+        &_bar {
+          list-style: none;
+          height: 40px;
+          text-align: right;
+
+          i {
+            color: $white;
+            font-size: 30px;
+          }
+
+          li:hover > a {
+            color: $white;
+            background: $water;
+          }
+
+          li:last-child:hover > a {
+            color: $white;
+            background: $red;
+          }
+
+          ul {
+            width: 150px;
+            display: none;
+            position: absolute;
+            top: 55px;
+            right: 0;
+
+            li a {
+              border-top: 1px solid #eee;
+            }
+          }
+
+          a {
+            display: block;
+            width: 150px;
+            height: 40px;
+            text-align: center;
+            color: $white;
+            font-size: 14px;
+            font-weight: bold;
+            line-height: 2.8;
+            background: $light-blue;
+            text-decoration: none;
+            border-right: 1px solid #eee;
+            box-sizing: border-box;
+          }
+        }
+      }
+    }
+
+    .search-and-community {
+      line-height: 50px;
+
+      li {
+        display: inline-block;
+      }
+
+      li:hover {
+        opacity: 0.9;
+      }
+
+      .community {
+        margin-left: 20px;
+      }
+
+      i {
+        color: $white;
+        font-size: 30px;
+      }
+    }
+  }
+}
+
+.left-float {
+  float: left;
+}
+
+.right-float {
+  float: right;
+}

@@ -5,12 +5,21 @@
     %title JustDoIt
     = csrf_meta_tags
     = csp_meta_tag
-    %meta{:content => "width=device-width, initial-scale=1", :name => "viewport"}/
+    = favicon_link_tag('/images/favicon.png')
+    %meta{content: "#{current_user.id if current_user}", name: "current_user_id"}/
+    %meta{content: "width=device-width, initial-scale=1", name: "viewport"}/
     = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload'
+    %link{:crossorigin => "anonymous", :href => "https://use.fontawesome.com/releases/v5.8.1/css/all.css", :integrity => "sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf", :rel => "stylesheet"}/
+    %link{:href => "https://fonts.googleapis.com/css?family=Pacifico", :rel => "stylesheet"}/
+
     = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
+    %script{:src => "https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"}
+
+
   %body
     - if flash[:notice]
       .alert.alert-info= flash[:notice]
     - if flash[:alert]
       .alert.alert-danger= flash[:alert]
+
     = yield

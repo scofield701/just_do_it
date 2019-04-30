@@ -1,7 +1,22 @@
-.login-page
-  .container
-    .login-page_contents
-      %h1.login-page_contents_title.yellow YOU ARE
-      %h1.login-page_contents_title.black NOT
-      %h1.login-page_contents_title.red ALONE.
-      = link_to "START", new_user_session_path, class: "btn login-page_contents_btn"
+.scroll
+  = render 'shared/header'
+
+  .users-page
+    - @users.each do |user|
+      %section.user-card
+        = link_to user_path(user), class: "user-card_link" do
+          %figure.user-card_image
+            - if user.image?
+              = image_tag user.image.to_s
+            - else
+              = image_tag "/images/no_image.jpg", alt: ""
+          .user-card-intro
+            %h3.user-card-intro_name
+              = user.nickname
+            .user-card-intro_fav
+              .fav-count
+                %i.fas.fa-thumbs-up
+                %span
+                  = user.favorite_count
+
+  = render 'shared/footer'
