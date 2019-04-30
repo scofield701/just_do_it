@@ -1,17 +1,17 @@
-.signinPage
+.signin-page
   .container
-    .userIcon
+    .user-icon
       %i.fas.fa-user.fa-3x
-    %h2.title ログイン
+    %h2.title Login
     = form_for(resource, as: resource_name, url: session_path(resource_name)) do |f|
       .form-group
-        = f.label :email
+        = f.label :メールアドレス, class: "form-group_label"
         %br/
-        = f.email_field :email, autofocus: true, class: "form-control", autocomplete: "email", placeholder: "emailを入力してください"
+        = f.email_field :email, autofocus: true, class: "form-group_input", autocomplete: "email", placeholder: "メールアドレス", required: "required"
       .form-group
-        = f.label :password
+        = f.label :パスワード, class: "form-group_label"
         %br/
-        = f.password_field :password, class: "form-control", autocomplete: "off", placeholder: "パスワードを入力してください"
+        = f.password_field :password, class: "form-group_input", autocomplete: "off", placeholder: "パスワード", required: "required"
       .form-group.text-center
-        = f.submit "ログインする", class: "loginBtn"
+        = f.submit "ログインする", class: "login-btn"
     = render "devise/shared/links"

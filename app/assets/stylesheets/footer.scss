@@ -1,0 +1,60 @@
+footer {
+  position: fixed;
+  bottom: 0px;
+  width: 100vw;
+  z-index: 100;
+  background-color: $light-blue;
+  opacity: 0.9;
+  height: 56px;
+
+  .copy {
+    display: inline-block;
+    color: $white;
+    line-height: 60px;
+    padding-left: 10px;
+    font-size: 12px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateY(-50%) translateX(-50%);
+    margin: 0 auto;
+  }
+
+  .twitter {
+    float: right;
+  }
+
+  .btn-social-square {
+    display: inline-block;
+    text-decoration: none;
+    margin-top: 3px;
+    margin-right: 6px;
+    width: 50px;
+    height: 50px;
+    font-size: 23px;
+    color:white;
+    border-radius: 12px;
+    text-align: center;
+    overflow: hidden;
+    font-weight: bold;
+    transition: .3s;
+
+    i {
+      line-height:50px;
+    }
+
+    span {
+      display:inline-block;
+      transition: .5s;
+    }
+  }
+
+  .btn-social-square:hover {
+    -webkit-transform: translateY(-5px);
+    transform: translateY(-5px);
+  }
+
+  .btn-social-square--twitter {
+    background: #22b8ff;
+  }
+}

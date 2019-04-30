@@ -1,1 +1,27 @@
-HEllo
+= render "shared/header"
+
+.usershow
+  .user-info
+    .user-info_img
+      - if @user.image?
+        = image_tag @user.image.to_s
+      - else
+        = image_tag "/images/no_image.jpg", alt: ""
+    .user-info_name
+      = @user.nickname
+    .user-info_intro
+      = @user.intro
+  - if current_user.id == @user.id
+    .userAction
+      .userAction_edit.userAction_common
+        = link_to(content_tag(:i, "", class: 'fas fa-edit fa-2x'), edit_user_registration_path)
+        %span
+          EDIT
+      .userAction_logout.userAction_common
+        = link_to(content_tag(:i, "", class: 'fas fa-door-open fa-2x'), destroy_user_session_path, method: :delete)
+        %span
+          LOGOUT
+  - else
+    #judged
+      = render partial: 'shared/like-or-dislike', locals: { favorite: @favorite, user: @user}
+

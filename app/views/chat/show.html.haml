@@ -1,0 +1,18 @@
+.chat-page
+  %header.header
+    = link_to "", matching_index_path, class: "back"
+    .room-user
+      .room-user_img
+        - if @room_user.image?
+          = image_tag @room_user.image.to_s
+        - else
+          = image_tag "/images/no_image.jpg", alt: ""
+      .room-user_name
+        = @room_user.nickname
+  .container
+    .messages
+      = render @messages
+  %form.message-form
+    .container
+      %textarea{"data-behavior" => "room_speaker", placeholder: "メッセージを入力...", type: "text", class: "message-form_input"}
+

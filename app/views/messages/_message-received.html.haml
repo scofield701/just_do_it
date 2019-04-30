@@ -1,0 +1,13 @@
+.message
+  .message_user-icon
+    - if message.user.image?
+      = image_tag message.user.image.to_s
+    - else
+      = image_tag "/images/no_image.jpg", alt: ""
+  .message_user-name
+    = message.user.nickname
+  .message_text
+    .text
+      = message.message
+    %span.message-time
+      = message.created_at.strftime("%H:%M")

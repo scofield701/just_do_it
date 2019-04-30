@@ -1,0 +1,12 @@
+- if favorite&.status == 0
+  .nope-user
+    スキップ済
+- elsif favorite&.status == 1
+  .like-user
+    いいね済
+- else
+  #action-btn.actions
+    = link_to favorites_path(favorite: {to_user_id: user.id, from_user_id: current_user.id, status: 0}), method: :post, remote: true, class: "dislike" do
+      %i.fas.fa-times.fa-2x
+    = link_to favorites_path(favorite: {to_user_id: user.id, from_user_id: current_user.id, status: 1}), method: :post, remote: true, class: "like" do
+      %i.fas.fa-heart.fa-2x
