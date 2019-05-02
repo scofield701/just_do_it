@@ -25,6 +25,8 @@
 
 # Ignore master key for decrypting credentials and more.
 .env
+config/credentials.yml.enc
+config/master.key
 /config/master.key
 public/uploads/*
 config/secrets.yml
