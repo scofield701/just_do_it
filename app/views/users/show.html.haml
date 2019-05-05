@@ -11,7 +11,7 @@
       = @user.nickname
     .user-info_intro
       = @user.intro
-  - if current_user.id == @user.id
+  - if current_user?(@user)
     .userAction
       .userAction_edit.userAction_common
         = link_to(content_tag(:i, "", class: 'fas fa-edit fa-2x'), edit_user_registration_path)

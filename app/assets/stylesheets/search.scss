@@ -1,0 +1,35 @@
+.form-group {
+  padding-top: 120px;
+
+  .label {
+    margin-bottom: 10px;
+  }
+
+  &_label {
+    font-size: 20px;
+    font-weight: bold;
+  }
+}
+
+.sex_select {
+  width: 700px;
+  margin: 0 auto;
+  text-align: center;
+
+  .cp_ipcheck {
+    display: inline;
+  }
+}
+
+.search-submit {
+  display:block;
+  margin: 30px auto;
+  font-size: 16px;
+  padding: 10px 15px;
+  border-radius: 10px;
+}
+.search-submit:hover {
+  color: $white;
+  background-color: $water;
+  transition: 0.5s;
+}

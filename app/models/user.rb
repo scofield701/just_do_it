@@ -13,10 +13,6 @@ class User < ApplicationRecord
 
   enum sex: { 男: 0, 女: 1 }
 
-  def following?(other_user)
-    following_relationships.find_by(to_user_id: other_user.id)
-  end
-
   def last_message
     if (last_message = messages.last).present?
       last_message.message? ? last_message.message : '画像が投稿されています'

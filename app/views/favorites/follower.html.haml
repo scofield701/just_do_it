@@ -1,0 +1,18 @@
+= render "shared/header"
+.matching
+  .matching_num
+    = @users.size
+    人の方からいいねを頂いています
+  %h2.matching_title いいねをしてくれた人一覧
+  .matching_list
+    - @users.each do |user|
+      = link_to user_path(user) do
+        .matching-user
+          .matching-user_img
+            - if user.image?
+              = image_tag user.image.to_s
+            - else
+              = image_tag "/images/no_image.jpg", alt: ""
+          .matching-user_name
+            = user.nickname
+

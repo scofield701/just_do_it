@@ -18,4 +18,12 @@ class ApplicationController < ActionController::Base
     @search = User.ransack(params[:q]) #ransackメソッド推奨
     @search_items = @search.result(distinct: true).page(params[:page]).per(8).order(id: "DESC")
   end
+
+  def user_sex?(user)
+    if user.sex == "男"
+      return 1
+    else
+      return 0
+    end
+  end
 end
