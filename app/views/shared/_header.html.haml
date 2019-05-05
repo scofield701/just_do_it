@@ -18,7 +18,9 @@
             %li
               = link_to "Matching", matching_index_path, class: "matching-btn"
             %li
-              = link_to "Favorite", user_path(current_user.id), class: "favorite-btn"
+              = link_to "Follower", follower_favorites_path, class: "follower-btn"
+            %li
+              = link_to "Following", following_favorites_path, class: "follower-btn"
             %li
               = link_to "Setting", edit_user_registration_path, class: "setting-btn"
             %li
@@ -27,7 +29,7 @@
     .search-and-community
       %ul
         %li.search
-          = link_to(content_tag(:i, "", class: "fa fa-search search-btn"))
+          = link_to(content_tag(:i, "", class: "fa fa-search search-btn"), search_users_path)
         %li.community
           = link_to(content_tag(:i, "", class: "fa fa-users community-btn"))
 

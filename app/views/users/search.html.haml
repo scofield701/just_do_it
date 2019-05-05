@@ -1,0 +1,17 @@
+= render "shared/header"
+= search_form_for @search, url: search_result_users_path do |f|
+  .form-group.sex_select
+    .label
+      = f.label :性別, class: "form-group_label"
+    .form-check.form-check-inline.cp_ipcheck
+      = f.radio_button :sex_eq, "", checked: true, class: "form-check-input", id: "inlineRadio0"
+      %label.form-check-label{:for => "inlineRadio0"} 指定なし
+    .form-check.form-check-inline.cp_ipcheck
+      = f.radio_button :sex_eq, "男", class: "form-check-input", id: "inlineRadio1"
+      %label.form-check-label{:for => "inlineRadio1"} 男性
+    .form-check.form-check-inline.cp_ipcheck
+      = f.radio_button :sex_eq, "女", class: "form-check-input", id: "inlineRadio2"
+      %label.form-check-label{:for => "inlineRadio2"} 女性
+  = button_tag type: "submit", class: "search-submit" do
+    %i.fa.fa-search
+      検索

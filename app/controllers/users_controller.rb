@@ -1,8 +1,10 @@
 class UsersController < ApplicationController
   before_action :authenticate_user!
+  before_action :set_user
 
   def index
-    @users = User.where.not(id: current_user.id)
+    @sex   = user_sex?(@user)
+    @users = User.where.not(id: current_user.id).where(sex: @sex)
   end
 
   def show
@@ -13,13 +15,18 @@ class UsersController < ApplicationController
   def search
   end
 
-  def like_user
-    @user  = User.find(params[:id])
-    @users = @user.followings
+  def search_result
+    @search = User.ransack(params[:q])
+    @users = @search.result(distinct: true).order(id: "DESC")
   end
 
-  def nope_user
-    @user  = User.find(params[:id])
-    @users = @user.followers
+  private
+
+  def set_user
+    @user = User.find(current_user.id)
+  end
+
+  def search_params
+    params.require(:q).permit(:sex_eq)
   end
 end
