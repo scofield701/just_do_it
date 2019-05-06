@@ -1,13 +1,14 @@
-.form-group {
-  padding-top: 120px;
+.search-field {
+  &_form-group {
+    padding-top: 120px;
 
-  .label {
-    margin-bottom: 10px;
-  }
-
-  &_label {
-    font-size: 20px;
-    font-weight: bold;
+    .form-label {
+      margin-bottom: 10px;
+      .label {
+        font-size: 20px;
+        font-weight: bold;
+      }
+    }
   }
 }
 
