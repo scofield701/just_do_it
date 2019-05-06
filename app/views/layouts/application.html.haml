@@ -6,6 +6,7 @@
     = csrf_meta_tags
     = csp_meta_tag
     = favicon_link_tag('/images/favicon.png')
+    = action_cable_meta_tag
     %meta{content: "#{current_user.id if current_user}", name: "current_user_id"}/
     %meta{content: "width=device-width, initial-scale=1", name: "viewport"}/
     = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload'
