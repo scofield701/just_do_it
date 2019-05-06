@@ -5,5 +5,4 @@ test:
   adapter: async
 
 production:
- adapter: redis
- url: redis://13.230.132.39:6381
+ adapter: async
