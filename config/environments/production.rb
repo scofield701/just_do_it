@@ -44,7 +44,6 @@ Rails.application.configure do
   # Mount Action Cable outside main process or domain
   # config.action_cable.mount_path = nil
 
-  ActionCable.server.config.disable_request_forgery_protection = true
   config.action_cable.url = 'wss://just--do--it.com/cable'
   config.action_cable.allowed_request_origins = [ 'https://just--do--it.com', /https:\/\/just--do--it.*/ ]
 
