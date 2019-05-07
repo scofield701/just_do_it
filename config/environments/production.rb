@@ -45,7 +45,7 @@ Rails.application.configure do
   # config.action_cable.mount_path = nil
 
   config.action_cable.url = 'wss://just--do--it.com/cable'
-  config.action_cable.allowed_request_origins = [ 'https://just--do--it.com', /https:\/\/just--do--it.*/ ]
+  config.action_cable.allowed_request_origins = [ 'https://just--do--it.com' ]
 
   # Force all access to the app over SSL, use Strict-Transport-Security, and use secure cookies.
   config.force_ssl = true
