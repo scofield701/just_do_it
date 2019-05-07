@@ -6,4 +6,4 @@ test:
 
 production:
   adapter: redis
-  url: redis://master.just-do-it-redis.mbpeao.apne1.cache.amazonaws.com:6379
+  url: redis://just-do-it-redis.mbpeao.apne1.cache.amazonaws.com:6379
