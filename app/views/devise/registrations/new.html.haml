@@ -37,6 +37,17 @@
           = f.label :メールアドレス, class: "form-group_label"
           = f.email_field :email, class: "form-group_input", placeholder: "メールアドレス" ,autocomplete: "email", required: "required"
         .form-group
+          = f.label :生年月日, class: "form-group_label"
+          .birthday-select
+            = f.select :birth_year, [], required: "required", class: "selectbox"
+            %span.form-group_label 年
+          .birthday-select
+            = f.collection_select :birth_month, BirthMonth.all, :id, :name, {include_blank: "---"} ,{required: "required", class: "selectbox", id: "user_birth_month"}
+            %span.form-group_label 月
+          .birthday-select
+            = f.select :birth_day, [], required: "required", class: "selectbox"
+            %span.form-group_label 日
+        .form-group
           = f.label :パスワード, class: "form-group_label"
           - if @minimum_password_length
             %em.form-group_label

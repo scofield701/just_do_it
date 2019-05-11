@@ -4,7 +4,8 @@ class UsersController < ApplicationController
 
   def index
     @sex   = user_sex?(@user)
-    @users = User.where.not(id: current_user.id).where(sex: @sex)
+    user_ids = Favorite.where(from_user_id: current_user.id).pluck(:to_user_id)
+    @users = User.where.not(id: current_user.id).where.not(id: user_ids).where(sex: @sex)
   end
 
   def show

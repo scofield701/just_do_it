@@ -6,6 +6,8 @@ class User < ApplicationRecord
   has_many :from_user_favorites, foreign_key: "to_user_id", class_name: "Favorite", dependent: :destroy
   has_many :from_users, through: :from_user_favorites
 
+  has_one :profile
+
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
 
