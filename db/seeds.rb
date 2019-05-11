@@ -6,8 +6,7 @@ User.create!(
   sex: 0,
   birth_year: 1996,
   birth_month: 4,
-  birth_day: 2})
-User.create!(
+  birth_day: 2},
   {email: 'test2@gmail.com',
   password: '123456',
   nickname: 'じょう',
@@ -15,8 +14,7 @@ User.create!(
   sex: 0,
   birth_year: 1994,
   birth_month: 9,
-  birth_day: 9})
-User.create!(
+  birth_day: 9},
   {email: 'test3@gmail.com',
   password: '123456',
   nickname: 'りゅうじ',
@@ -24,8 +22,7 @@ User.create!(
   sex: 0,
   birth_year: 1995,
   birth_month: 10,
-  birth_day: 11})
-User.create!(
+  birth_day: 11},
   {email: 'test4@gmail.com',
   password: '123456',
   nickname: 'かほこ',
@@ -33,8 +30,7 @@ User.create!(
   sex: 1,
   birth_year: 1996,
   birth_month: 4,
-  birth_day: 2})
-User.create!(
+  birth_day: 2},
   {email: 'test5@gmail.com',
   password: '123456',
   nickname: 'みほの',
@@ -42,8 +38,7 @@ User.create!(
   sex: 1,
   birth_year: 1994,
   birth_month: 9,
-  birth_day: 9})
-User.create!(
+  birth_day: 9},
   {email: 'test6@gmail.com',
   password: '123456',
   nickname: 'みすず',
@@ -51,8 +46,7 @@ User.create!(
   sex: 0,
   birth_year: 1995,
   birth_month: 10,
-  birth_day: 11})
-User.create!(
+  birth_day: 11},
   {email: 'user1@gmail.com',
   password: '123456',
   nickname: 'ケイスケ',
@@ -61,8 +55,7 @@ User.create!(
   birth_year: 1978,
   birth_month: 4,
   birth_day: 2,
-  image: open("#{Rails.root}/db/img/keisuke.jpg")})
-User.create!(
+  image: open("#{Rails.root}/db/img/keisuke.jpg")},
   {email: 'user2@gmail.com',
   password: '123456',
   nickname: 'ジュンヤ',
@@ -71,8 +64,7 @@ User.create!(
   birth_year: 1990,
   birth_month: 9,
   birth_day: 9,
-  image: open("#{Rails.root}/db/img/junya.jpg")})
-User.create!(
+  image: open("#{Rails.root}/db/img/junya.jpg")},
   {email: 'user3@gmail.com',
   password: '123456',
   nickname: 'ユキ',
@@ -81,8 +73,7 @@ User.create!(
   birth_year: 1970,
   birth_month: 10,
   birth_day: 11,
-  image: open("#{Rails.root}/db/img/yuki.jpg")})
-User.create!(
+  image: open("#{Rails.root}/db/img/yuki.jpg")},
   {email: 'user4@gmail.com',
   password: '123456',
   nickname: 'ナオコ',
@@ -91,8 +82,7 @@ User.create!(
   birth_year: 1989,
   birth_month: 1,
   birth_day: 15,
-  image: open("#{Rails.root}/db/img/naoko.jpg")})
-User.create!(
+  image: open("#{Rails.root}/db/img/naoko.jpg")},
   {email: 'user5@gmail.com',
   password: '123456',
   nickname: 'コウダイ',
@@ -101,8 +91,7 @@ User.create!(
   birth_year: 1994,
   birth_month: 8,
   birth_day: 9,
-  image: open("#{Rails.root}/db/img/koudai.jpg")})
-User.create!(
+  image: open("#{Rails.root}/db/img/koudai.jpg")},
   {email: 'user6@gmail.com',
   password: '123456',
   nickname: 'ヒロツグ',
@@ -111,8 +100,7 @@ User.create!(
   birth_year: 1997,
   birth_month: 3,
   birth_day: 22,
-  image: open("#{Rails.root}/db/img/hirotugu.jpg")})
-User.create!(
+  image: open("#{Rails.root}/db/img/hirotugu.jpg")},
   {email: 'user7@gmail.com',
   password: '123456',
   nickname: 'エヴァ',
@@ -121,8 +109,7 @@ User.create!(
   birth_year: 1992,
   birth_month: 11,
   birth_day: 11,
-  image: open("#{Rails.root}/db/img/eva.jpeg")})
-User.create!(
+  image: open("#{Rails.root}/db/img/eva.jpeg")},
   {email: 'user8@gmail.com',
   password: '123456',
   nickname: 'ナオミ',
@@ -131,8 +118,7 @@ User.create!(
   birth_year: 1985,
   birth_month: 12,
   birth_day: 24,
-  image: open("#{Rails.root}/db/img/naomi.jpg")})
-User.create!(
+  image: open("#{Rails.root}/db/img/naomi.jpg")},
   {email: 'user9@gmail.com',
   password: '123456',
   nickname: 'アシュリー',
@@ -141,8 +127,7 @@ User.create!(
   birth_year: 1990,
   birth_month: 3,
   birth_day: 23,
-  image: open("#{Rails.root}/db/img/asyuri.jpg")})
-User.create!(
+  image: open("#{Rails.root}/db/img/asyuri.jpg")},
   {email: 'user10@gmail.com',
   password: '123456',
   nickname: 'かなこ',
@@ -151,8 +136,7 @@ User.create!(
   birth_year: 1991,
   birth_month: 2,
   birth_day: 2,
-  image: open("#{Rails.root}/db/img/kanako.jpeg")})
-User.create!(
+  image: open("#{Rails.root}/db/img/kanako.jpeg")},
   {email: 'user11@gmail.com',
   password: '123456',
   nickname: 'けんじろう',
@@ -161,8 +145,7 @@ User.create!(
   birth_year: 1990,
   birth_month: 10,
   birth_day: 11,
-  image: open("#{Rails.root}/db/img/kenjirou.jpg")})
-User.create!(
+  image: open("#{Rails.root}/db/img/kenjirou.jpg")},
   {email: 'user12@gmail.com',
   password: '123456',
   nickname: 'ジョン',
@@ -171,8 +154,7 @@ User.create!(
   birth_year: 1988,
   birth_month: 8,
   birth_day: 8,
-  image: open("#{Rails.root}/db/img/jon.jpg")})
-User.create!(
+  image: open("#{Rails.root}/db/img/jon.jpg")},
   {email: 'user13@gmail.com',
   password: '123456',
   nickname: 'なぎさ',
@@ -181,8 +163,7 @@ User.create!(
   birth_year: 1992,
   birth_month: 10,
   birth_day: 21,
-  image: open("#{Rails.root}/db/img/nagisa.png")})
-User.create!(
+  image: open("#{Rails.root}/db/img/nagisa.png")},
   {email: 'user14@gmail.com',
   password: '123456',
   nickname: 'ありさ',
@@ -191,8 +172,7 @@ User.create!(
   birth_year: 1993,
   birth_month: 7,
   birth_day: 17,
-  image: open("#{Rails.root}/db/img/arisa.jpg")})
-User.create!(
+  image: open("#{Rails.root}/db/img/arisa.jpg")},
   {email: 'user15@gmail.com',
   password: '123456',
   nickname: 'がく',
@@ -201,8 +181,7 @@ User.create!(
   birth_year: 1993,
   birth_month: 4,
   birth_day: 14,
-  image: open("#{Rails.root}/db/img/gaku.jpg")})
-User.create!(
+  image: open("#{Rails.root}/db/img/gaku.jpg")},
   {email: 'user16@gmail.com',
   password: '123456',
   nickname: 'つよし',
@@ -211,8 +190,7 @@ User.create!(
   birth_year: 1979,
   birth_month: 11,
   birth_day: 19,
-  image: open("#{Rails.root}/db/img/tuyosi.jpeg")})
-User.create!(
+  image: open("#{Rails.root}/db/img/tuyosi.jpeg")},
   {email: 'user17@gmail.com',
   password: '123456',
   nickname: 'メイ',
@@ -221,8 +199,7 @@ User.create!(
   birth_year: 1986,
   birth_month: 2,
   birth_day: 22,
-  image: open("#{Rails.root}/db/img/mei.png")})
-User.create!(
+  image: open("#{Rails.root}/db/img/mei.png")},
   {email: 'user18@gmail.com',
   password: '123456',
   nickname: 'カーラ',
@@ -231,8 +208,7 @@ User.create!(
   birth_year: 1991,
   birth_month: 5,
   birth_day: 6,
-  image: open("#{Rails.root}/db/img/kara.jpg")})
-User.create!(
+  image: open("#{Rails.root}/db/img/kara.jpg")},
   {email: 'user19@gmail.com',
   password: '123456',
   nickname: 'アン',
@@ -241,8 +217,7 @@ User.create!(
   birth_year: 1989,
   birth_month: 4,
   birth_day: 4,
-  image: open("#{Rails.root}/db/img/an.jpg")})
-User.create!(
+  image: open("#{Rails.root}/db/img/an.jpg")},
   {email: 'user20@gmail.com',
   password: '123456',
   nickname: 'ともみ',
