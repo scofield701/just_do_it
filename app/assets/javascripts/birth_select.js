@@ -104,8 +104,6 @@ $( document ).on('turbolinks:load', function() {
     } else {
       maxday -= 1;
     }
-    console.log(maxday);
-    console.log(lastday);
     if(lastday < select){
       $(`#day_span_${select}`).removeClass("selection");
       $('#day_span_1').addClass("selection");
@@ -114,12 +112,10 @@ $( document ).on('turbolinks:load', function() {
     if(maxday > lastday){
       for (i = lastday + 1; i <= maxday; i++){
         $(`#day_span_${i}`).addClass("none");
-        console.log("add")
       }
     } else{
       for (i = maxday + 1; i <= lastday; i++){
         $(`#day_span_${i}`).removeClass("none");
-        console.log("remove");
       }
     }
   }
