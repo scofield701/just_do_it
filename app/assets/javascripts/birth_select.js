@@ -105,17 +105,17 @@ $( document ).on('turbolinks:load', function() {
       maxday -= 1;
     }
     if(lastday < select){
-      $(`#day_span_${select}`).removeClass("selection");
+      $('#day_span_'+select).removeClass("selection");
       $('#day_span_1').addClass("selection");
       $('#day-trigger').text("1");
     }
     if(maxday > lastday){
       for (i = lastday + 1; i <= maxday; i++){
-        $(`#day_span_${i}`).addClass("none");
+        $('#day_span_'+i).addClass("none");
       }
     } else{
       for (i = maxday + 1; i <= lastday; i++){
-        $(`#day_span_${i}`).removeClass("none");
+        $('#day_span_'+i).removeClass("none");
       }
     }
   }
