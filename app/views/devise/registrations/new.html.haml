@@ -40,11 +40,11 @@
           = f.label :生年月日, class: "form-group_label"
           .birth-form
             .birthday
-              = f.select :birth_year, [], {}, {required: "required", class: "custom-select sources", placeholder: "年"}
+              = f.select :birth_year, ["年", ""], {}, {required: "required", class: "custom-select sources", placeholder: "年"}
             .birthday
-              = f.select :birth_month, [], {}, { required: "required", class: "custom-select sources", placeholder: "月"}
+              = f.select :birth_month, ["月", ""], {}, { required: "required", class: "custom-select sources", placeholder: "月"}
             .birthday
-              = f.select :birth_day, [], {}, { required: "required", class: "custom-select sources day-select", placeholder: "日"}
+              = f.select :birth_day, ["日", ""], {}, { required: "required", class: "custom-select sources day-select", placeholder: "日"}
         .form-group
           = f.label :パスワード, class: "form-group_label"
           - if @minimum_password_length
