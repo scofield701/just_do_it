@@ -53,7 +53,7 @@ User.create!(
   password: '123456',
   nickname: 'みすず',
   intro: '美鈴です',
-  sex: 0,
+  sex: 1,
   birth_year: 1995,
   birth_month: 10,
   birth_day: 11,
