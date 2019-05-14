@@ -32,7 +32,7 @@
       }
       .user-card-intro {
         padding-top: 16px;
-        &_name {
+        &_name ,&_age{
           display: inline-block;
           overflow: hidden;
           position: relative;

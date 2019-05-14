@@ -1,11 +1,11 @@
 = render "shared/header"
 .matching
   .matching_num
-    = @matching.size
+    = @rooms.size
     人とマッチングしています
   %h2.matching_title マッチングした人一覧
   .matching_list
-    - @matching.each do |user|
+    - @room_users.zip(@rooms).each do |user,room|
       .matching-user
         .matching-user_img
           - if user.image?
@@ -15,8 +15,5 @@
         .matching-user_name
           = user.nickname
         .matching-user_last-message
-          = user.last_message
-        = form_tag :chat_index, method: :post do
-          %input{:name => "user_id", :type => "hidden", :value => "#{user.id}"}/
-          = submit_tag 'チャットを開く', class: "chat-form_btn"
-
+          = room.last_message
+        = link_to "チャットを開く", chat_path(room), class: "chat-form_btn"

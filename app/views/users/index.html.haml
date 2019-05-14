@@ -13,6 +13,8 @@
           .user-card-intro
             %h3.user-card-intro_name
               = user.nickname
+            %h3.user-card-intro_age
+              = "#{age(user.birth_year,user.birth_month,user.birth_day)}歳"
             .user-card-intro_fav
               .fav-count
                 %i.fas.fa-thumbs-up
