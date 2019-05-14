@@ -18,5 +18,5 @@ Rails.application.routes.draw do
   end
 
   resources :matching,  only: :index
-  resources :chat,      only: [:create, :show]
+  resources :chat,      only: :show
 end

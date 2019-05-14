@@ -42,20 +42,18 @@
         color: $msg-text-gray;
       }
 
-      form {
+      .chat-form_btn {
         position: absolute;
         right: 0;
-        .chat-form_btn {
-          border: none;
-          padding: 10px;
-          background: $water;
-          color: #fff;
-          border-radius: 6px;
-          cursor: pointer;
-          transition: opacity .3s;
-          &:hover {
-            opacity: .7;
-          }
+        border: none;
+        padding: 10px;
+        background: $water;
+        color: #fff;
+        border-radius: 6px;
+        cursor: pointer;
+        transition: opacity .3s;
+        &:hover {
+          opacity: .7;
         }
       }
     }

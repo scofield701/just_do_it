@@ -9,6 +9,8 @@
         = image_tag "/images/no_image.jpg", alt: ""
     .user-info_name
       = @user.nickname
+    .user-info_age
+      = "#{age(@user.birth_year, @user.birth_month, @user.birth_day)}歳"
     .user-info_intro
       = @user.intro
   - if current_user?(@user)

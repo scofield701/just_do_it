@@ -16,4 +16,5 @@
 //= require jquery3
 //= require_tree .
 //= require websocket_rails/main
+//= require_tree ./common
 

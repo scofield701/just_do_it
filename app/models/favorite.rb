@@ -16,4 +16,5 @@ class Favorite < ApplicationRecord
     fav_count += 1
     user.update(favorite_count: fav_count)
   end
+
 end
