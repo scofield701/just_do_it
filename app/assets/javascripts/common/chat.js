@@ -1,5 +1,4 @@
-$( document ).on('turbolinks:load', function() {
-
+document.addEventListener("turbolinks:load", function() {
   if(/chat/.test(window.location.pathname)) {
     var path = window.location.pathname.split('/');
     var room_id = path[path.length - 1];
@@ -7,20 +6,7 @@ $( document ).on('turbolinks:load', function() {
       connected: function() {},
       disconnected: function() {},
       received: function(data) {
-        // console.log(data['send_id']);
-        // console.log(data['user_id']);
-        // console.log(data['content']);
-        // console.log(data['content2']);
-
-        // if (data['send_id'] === data['user_id']) {
-        //   $('.messages').append(data['content']);
-        //   console.log('ok');
-        // } else {
-        //   $('.messages').append(data['content2']);
-        //   console.log('no');
-        // }
-        $('.messages').append(data['content2']);
-
+        $('#messages').append(data['content']);
       },
       speak: function(message) {
         return this.perform('speak', {
