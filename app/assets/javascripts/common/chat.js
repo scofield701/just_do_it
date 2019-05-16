@@ -1,4 +1,5 @@
 document.addEventListener("turbolinks:load", function() {
+  App.chat_room.unsubscribe();
   if(/chat/.test(window.location.pathname)) {
     var path = window.location.pathname.split('/');
     var room_id = path[path.length - 1];
