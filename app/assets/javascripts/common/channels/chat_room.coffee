@@ -8,5 +8,4 @@ App.chat_room = App.cable.subscriptions.create "ChatRoomChannel",
   received: (data) ->
 
   speak: ->
-    @perform 'speak'
 

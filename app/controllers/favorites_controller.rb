@@ -7,7 +7,7 @@ class FavoritesController < ApplicationController
     favorite.favorite_count(@user) if favorite.favorite?(params[:favorite][:status])
     favorite.save
     @favorite = Favorite.find_by(to_user_id: @user.id, from_user_id: current_user.id)
-    room_create(@user) if matching?(@user)
+    room_create(@user) if matching?(@user, @favorite)
   end
 
   def following
@@ -30,8 +30,9 @@ class FavoritesController < ApplicationController
     params.require(:favorite).permit(:to_user_id, :from_user_id, :status)
   end
 
-  def matching?(user)
+  def matching?(user, status)
     @matching = Favorite.find_by(to_user_id: current_user.id, from_user_id: user.id, status: 1)
+    return true if @matching.present? && status.status == 1
   end
 
   def room_create(user)
