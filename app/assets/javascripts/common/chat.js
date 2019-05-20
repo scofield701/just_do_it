@@ -4,10 +4,13 @@ document.addEventListener("turbolinks:load", function() {
     var path = window.location.pathname.split('/');
     var room_id = path[path.length - 1];
     App.chat_room = App.cable.subscriptions.create({ channel: "ChatRoomChannel", room_id: room_id }, {
-      connected: function() {},
+      connected: function() {
+        $("#messages").scrollTop($("#messages")[0].scrollHeight);
+      },
       disconnected: function() {},
       received: function(data) {
         $('#messages').append(data['content']);
+        $("#messages").scrollTop($("#messages")[0].scrollHeight);
       },
       speak: function(message) {
         return this.perform('speak', {

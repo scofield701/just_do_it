@@ -1,4 +1,6 @@
 class UsersController < ApplicationController
+  include UsersHelper
+
   before_action :authenticate_user!
   before_action :set_user
 
@@ -17,6 +19,7 @@ class UsersController < ApplicationController
   end
 
   def search_result
+    min_ymd, max_ymd = birth_age(params[:q][:age_gteq_any], params[:q][:age_lteq_any]) if (params[:q][:age_gteq_any] != "") or (params[:q][:age_lteq_any] != "")
     @search = User.ransack(params[:q])
     @users = @search.result(distinct: true).order(id: "DESC")
   end

@@ -1,7 +1,113 @@
 .top-page
-  .container
-    .top-page_contents
-      %h1.top-page_contents_title.yellow YOU ARE
-      %h1.top-page_contents_title.black NOT
-      %h1.top-page_contents_title.red ALONE.
-      = link_to "START", new_user_session_path, class: "btn top-page_contents_btn"
+  %header#header
+    %h1 Just Do It
+    %nav
+      %ul
+        %li
+          = link_to "Intro", "#intro"
+        %li
+          = link_to "The Purpose", "#one"
+        %li
+          = link_to "App Attraction", "#two"
+        %li
+          = link_to "How To Use", "#three"
+        %li
+          = link_to "Log In", new_user_session_path
+  .header-background
+  %section#intro.main.style1.dark.fullscreen
+    .content.toppage-title
+      %header
+        %h2 You Are Not Alone.
+      %p
+        Welcome to
+        %strong Just Do It
+        %br/
+        Use this app to find a nice encounter
+      %footer
+        %a.next-button.style2.down{:href => "#one"} More
+  %section#one.main.style2.right.dark.fullscreen
+    .content.box.style2
+      %header
+        %h2 The Purpose
+      %p
+        「旅先や出張先で飲み友達が欲しい」・「趣味の合う友達が欲しい」・「恋人が欲しい」
+        %br/
+        どんな理由でも構いません。このアプリは人と人との出会いを手助けするアプリです。
+        %br/
+        アプリを通じて、素敵な出会いを探してみませんか？
+    %a.next-button.style2.down.anchored{:href => "#two"} Next
+    = link_to "START", new_user_session_path, class: "start-btn left"
+  %section#two.main.style2.left.dark.fullscreen
+    .content.box.style2
+      %header
+        %h2 App Attraction
+      %p
+        【付近のユーザー検索機能】
+        %br/
+        現在位置を取得を有効にしていると、同じように現在位置の取得を有効にしていて近くにいる登録ユーザーを検索できます。
+        %br/
+        【コミニュティ機能】
+        %br/
+        ユーザーは好きなコミュニティを作成することができ、コミュニティに参加しているユーザーを検索して、趣味や価値観が合うユーザーを探すことができます。
+    %a.next-button.style2.down.anchored{:href => "#three"} Next
+    = link_to "START", new_user_session_path, class: "start-btn right"
+  %section#three.main.style3.primary
+    .content
+      %header
+        %h2 How To Use
+        %p
+          まずは会員登録をしましょう。
+          %br/
+          %br/
+          会員登録が済んだら、相手からいいねを貰いやすくするために
+          %br/
+          プロフィールを充実させましょう。
+          %br/
+          %br/
+          又、コミュニティに参加・作成することで
+          %br/
+          趣味や価値観がわかりやすくなり、相手からの印象も良くなります。
+          %br/
+          %br/
+          準備が整ったら、年齢や職業、参加しているコミュニティなどで
+          %br/
+          条件を絞り、気になるお相手を探しましょう。
+          %br/
+          %br/
+          いいねを送信して、お相手からもいいねが頂ければ、メッセージ交換が可能となります。
+      .gallery
+        / %article.from-left
+        /   %a.image.fit{:href => "images/demo.png"}
+        /     %img{:alt => "", :src => "images/demo.png", :title => "SignUp"}/
+        / %article.from-right
+        /   %a.image.fit{:href => "images/demo1.png"}
+        /     %img{:alt => "", :src => "images/demo1.png", :title => "ChatRoom"}/
+        / %article.from-left
+        /   %a.image.fit{:href => "images/fulls/03.jpg"}
+        /     %img{:alt => "", :src => "images/thumbs/03.jpg", :title => "Air Lounge"}/
+        / %article.from-right
+        /   %a.image.fit{:href => "images/fulls/04.jpg"}
+        /     %img{:alt => "", :src => "images/thumbs/04.jpg", :title => "Carry on"}/
+        / %article.from-left
+        /   %a.image.fit{:href => "images/fulls/05.jpg"}
+        /     %img{:alt => "", :src => "images/thumbs/05.jpg", :title => "The sparkling shell"}/
+        / %article.from-right
+        /   %a.image.fit{:href => "images/fulls/06.jpg"}
+        /     %img{:alt => "", :src => "images/thumbs/06.jpg", :title => "Bent IX"}/
+      = link_to "START", new_user_session_path, class: "start-btn center"
+  %footer#footer
+    %ul.icons
+      %li
+        = link_to "" do
+          %i.fab.fa-twitter
+      %li
+        = link_to "" do
+          %i.fab.fa-facebook
+      %li
+        = link_to "" do
+          %i.fab.fa-instagram
+    %ul.menu
+      %li &copy; UCHIDA INDUSTRY
+      %li
+        DESIGN:
+        = link_to "STARCOFFEE66", "https://twitter.com/starcoffee66" ,{target: "_blank"}
