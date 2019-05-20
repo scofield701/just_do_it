@@ -1,25 +1,25 @@
 = render "shared/header"
 = search_form_for @search, url: search_result_users_path, class: "search-field" do |f|
-  .search-field_form-group.age-search
-    %label
-      %i.fab.fa-bitcoin
-      %span 価格
-    .select-wrap
-      = f.search_field :age_gteq_any , value: "",type: "number",value: "",name: "q[age_gteq_any][]",placeholder: "¥ Min",class: "age"
-      %span ~
-      = f.search_field :age_lteq_any , value: "",type: "number",value: "",name: "q[age_lteq_any][]",placeholder: "¥ Max",class: "age"
+  .search-field_form-group.sex_select
+    .form-label
+      = f.label :性別, class: "label"
+    .form-check.form-check-inline.cp_ipcheck
+      = f.radio_button :sex_eq, "", checked: true, class: "form-check-input", id: "inlineRadio0"
+      %label.form-check-label{:for => "inlineRadio0"} 指定なし
+    .form-check.form-check-inline.cp_ipcheck
+      = f.radio_button :sex_eq, "男", class: "form-check-input", id: "inlineRadio1"
+      %label.form-check-label{:for => "inlineRadio1"} 男性
+    .form-check.form-check-inline.cp_ipcheck
+      = f.radio_button :sex_eq, "女", class: "form-check-input", id: "inlineRadio2"
+      %label.form-check-label{:for => "inlineRadio2"} 女性
   = button_tag type: "submit", class: "search-submit" do
     %i.fa.fa-search
       検索
-/ .search-field_form-group.sex_select
-/ .form-label
-/   = f.label :性別, class: "label"
-/ .form-check.form-check-inline.cp_ipcheck
-/   = f.radio_button :sex_eq, "", checked: true, class: "form-check-input", id: "inlineRadio0"
-/   %label.form-check-label{:for => "inlineRadio0"} 指定なし
-/ .form-check.form-check-inline.cp_ipcheck
-/   = f.radio_button :sex_eq, "男", class: "form-check-input", id: "inlineRadio1"
-/   %label.form-check-label{:for => "inlineRadio1"} 男性
-/ .form-check.form-check-inline.cp_ipcheck
-/   = f.radio_button :sex_eq, "女", class: "form-check-input", id: "inlineRadio2"
-/   %label.form-check-label{:for => "inlineRadio2"} 女性
+/ .search-field_form-group.age-search
+/   %label
+/     %i.fab.fa-bitcoin
+/     %span 年齢
+/   .select-wrap
+/     = f.search_field :age_gteq_any , value: "",type: "number",value: "",name: "q[age_gteq_any]",placeholder: "Min",class: "age"
+/     %span ~
+/     = f.search_field :age_lteq_any , value: "",type: "number",value: "",name: "q[age_lteq_any]",placeholder: "Max",class: "age"
